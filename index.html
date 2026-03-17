@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<script async src="https://tally.so/widgets/embed.js"></script>
 <style>
 :root {
   --sky:       #1A6FAE;
@@ -555,7 +556,7 @@ footer {
   <a class="nav-logo" href="#">arthur<span>.</span></a>
   <div class="nav-actions">
     <a href="#waitlist" class="btn btn-white-outline" id="nav-secondary">Learn More</a>
-    <a href="#waitlist" class="btn btn-white-solid" id="nav-primary">Join Waitlist</a>
+    <button data-tally-open="jaxMkQ" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="0" class="btn btn-white-solid" id="nav-primary">Join Waitlist</button>
   </div>
 </nav>
 
@@ -567,7 +568,7 @@ footer {
       <h1>Millions of senior Americans<br>deserve more independence.<br><em>Their speaker could help,<br>IF it were truly intelligent.</em></h1>
       <p class="hero-sub">Arthur is the AI companion that makes existing smart speakers genuinely intelligent for aging in place. No new device. No app. No setup. Just voice.</p>
       <div class="hero-actions">
-        <a href="#waitlist" class="btn btn-white-solid">Join the Waitlist</a>
+        <button data-tally-open="jaxMkQ" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="0" class="btn btn-white-solid">Join the Waitlist</button>
         <a href="#demo" class="btn btn-white-outline">See How It Works</a>
       </div>
     </div>
@@ -862,11 +863,9 @@ footer {
   <div class="fade-up"><span class="section-label" style="display:block;text-align:center;">Get Involved</span></div>
   <h2 class="fade-up" data-delay="1">Be among the first<br>to meet Arthur.</h2>
   <p class="section-intro fade-up" data-delay="2">We're building toward an early beta and looking for seniors, caregivers, and families who want to be part of shaping it. Join the waitlist and we'll be in touch.</p>
-  <div class="cta-form fade-up" data-delay="1" id="cta-form">
-    <input type="email" id="wl-email" placeholder="your@email.com" />
-    <button class="btn btn-sky" onclick="handleWaitlist()">Join Waitlist</button>
+  <div class="fade-up" data-delay="1" style="margin-bottom: 14px;">
+    <button data-tally-open="jaxMkQ" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="0" class="btn btn-sky" style="font-size:16px; padding:14px 36px; margin:0 auto;">Join the Waitlist</button>
   </div>
-  <p class="cta-thanks" id="cta-thanks">✓ You're on the list — we'll be in touch soon.</p>
   <p class="cta-sep fade-up">— or —</p>
   <p class="cta-direct fade-up" data-delay="1">
     Want to talk sooner? Partner, investor, or just curious?<br>
@@ -898,19 +897,6 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-/* ── WAITLIST ── */
-function handleWaitlist() {
-  const email = document.getElementById('wl-email').value.trim();
-  const input = document.getElementById('wl-email');
-  if (!email || !email.includes('@')) { input.style.borderColor = '#B04040'; input.focus(); return; }
-  document.getElementById('cta-form').style.display = 'none';
-  document.getElementById('cta-thanks').style.display = 'block';
-}
-document.getElementById('wl-email').addEventListener('keydown', e => {
-  if (e.key === 'Enter') handleWaitlist();
-  else e.target.style.borderColor = '';
-});
 
 /* ── DEMO SCENARIOS ── */
 const SCENARIOS = [

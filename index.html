@@ -125,10 +125,6 @@ nav.scrolled .btn-white-solid:hover {
   letter-spacing: -0.02em; line-height: 1.12; margin-bottom: 10px; position: relative; z-index: 1;
 }
 .hero h1 em { font-style: italic; color: rgba(255,255,255,0.6); }
-.hero-tagline-wrap {
-  margin-top: 22px; margin-bottom: 14px;
-  display: flex; align-items: center; position: relative; z-index: 1;
-}
 .hero-layout {
   display: flex; align-items: center; justify-content: space-between;
   gap: 48px; position: relative; z-index: 1; flex: 1;
@@ -138,65 +134,15 @@ nav.scrolled .btn-white-solid:hover {
   flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
   padding-right: 24px; gap: 16px;
 }
-.hero-ai-pill {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 16px; border-radius: 100px;
-  background: rgba(255,255,255,0.11); border: 1px solid rgba(255,255,255,0.22);
-  backdrop-filter: blur(8px);
-  font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.75);
-  letter-spacing: 0.06em; text-transform: uppercase;
-  align-self: flex-start; margin-left: 12px;
-  animation: bubble-drift 6s ease-in-out infinite;
-  animation-delay: 0.8s;
-}
-.hero-ai-pill::before {
-  content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber-lt);
-  animation: dot-pulse 2.4s ease-in-out infinite;
-}
-.hero-tagline-bubble {
-  display: inline-flex; align-items: center; gap: 16px;
-  padding: 20px 28px; border-radius: 20px 20px 20px 6px;
-  background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.26);
-  backdrop-filter: blur(8px); white-space: nowrap;
-  animation: bubble-drift 6s ease-in-out infinite;
-}
 @keyframes bubble-drift {
   0%, 100% { transform: translateY(0px); }
   50%       { transform: translateY(-10px); }
 }
-.arthur-avatar {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--amber); display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', Georgia, serif; font-size: 20px; color: white; flex-shrink: 0;
-}
-.hero-tagline-bubble span {
-  font-size: 18px; color: rgba(255,255,255,0.88);
-  font-style: italic; font-family: 'Playfair Display', Georgia, serif;
-  white-space: nowrap;
-}
-.typing-cursor {
-  display: inline-block; width: 2px; height: 16px;
-  background: rgba(255,255,255,0.6); margin-left: 2px; vertical-align: middle;
-  animation: blink 1.1s step-end infinite;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 .hero-sub {
   font-size: clamp(16px, 1.7vw, 18px); color: rgba(255,255,255,0.62); max-width: 520px;
   line-height: 1.7; margin-top: 16px; margin-bottom: 40px;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-stats {
-  margin-top: 80px; padding-top: 36px;
-  border-top: 1px solid rgba(255,255,255,0.14);
-  display: flex; gap: 52px; flex-wrap: wrap;
-  justify-content: center;
-  position: relative; z-index: 1;
-}
-.hero-stat-num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 36px; color: var(--white); letter-spacing: -0.02em; line-height: 1;
-}
-.hero-stat-desc { font-size: 13px; color: rgba(255,255,255,0.45); max-width: 150px; line-height: 1.45; margin-top: 5px; }
 
 /* ── SHARED SECTION STYLES ── */
 section { padding: 96px 52px; }
@@ -452,20 +398,6 @@ section h2 { font-size: clamp(34px, 4.2vw, 52px); line-height: 1.1; max-width: 6
 .cta-section { background: var(--sky-pale); text-align: center; padding: 100px 52px; }
 .cta-section h2 { margin: 0 auto 20px; text-align: center; max-width: 580px; }
 .cta-section .section-intro { margin: 0 auto 44px; text-align: center; }
-.cta-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 14px; }
-.cta-form input {
-  flex: 1; padding: 12px 18px; border: 1.5px solid var(--border); border-radius: 8px;
-  font-family: 'DM Sans', sans-serif; font-size: 15px;
-  background: var(--white); color: var(--navy); outline: none;
-  transition: border-color 0.2s; box-shadow: 0 1px 3px rgba(13,35,64,0.06);
-}
-.cta-form input:focus { border-color: var(--sky); }
-.cta-form input::placeholder { color: #9DB5C8; }
-.cta-thanks { display: none; font-size: 15px; font-weight: 500; color: #1E7A4A; margin-bottom: 14px; }
-.cta-sep { font-size: 14px; color: #9DB5C8; margin: 24px 0; letter-spacing: 0.04em; }
-.cta-direct { font-size: 15px; color: var(--muted); }
-.cta-direct a { color: var(--sky); text-decoration: none; font-weight: 500; }
-.cta-direct a:hover { text-decoration: underline; }
 
 /* ── FOOTER ── */
 footer {
@@ -490,7 +422,6 @@ footer a:hover { color: rgba(255,255,255,0.9); }
   section, .hero, .demo-section { padding-left: 24px; padding-right: 24px; }
   .insight-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr 1fr; }
-  .hero-stats { gap: 30px; }
   footer { flex-direction: column; text-align: center; }
   .scenario-picker { grid-template-columns: 1fr; gap: 8px; }
   .hero-layout { flex-direction: column; gap: 32px; }
@@ -498,7 +429,6 @@ footer a:hover { color: rgba(255,255,255,0.9); }
 }
 @media (max-width: 560px) {
   .features-grid { grid-template-columns: 1fr; }
-  .cta-form { flex-direction: column; }
   footer { padding: 28px 24px; }
   .scenario-picker { grid-template-columns: 1fr; }
   .demo-messages { height: 260px; }
@@ -539,6 +469,52 @@ footer a:hover { color: rgba(255,255,255,0.9); }
 .everyday-payoff { margin-top: 34px; max-width: 640px; font-size: 17px; color: var(--muted); line-height: 1.8; }
 .everyday-payoff strong { color: var(--navy); font-weight: 500; }
 
+/* ── PRIVACY / YOUR WORDS ── */
+.privacy-section {
+  background: var(--sky-dark); position: relative; overflow: hidden;
+}
+.privacy-section::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 60% at 100% 0%, rgba(43,133,200,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 45% at 0% 100%, rgba(15,79,128,0.45) 0%, transparent 55%);
+}
+.privacy-section > * { position: relative; z-index: 1; }
+.privacy-section .section-label { color: var(--amber-lt); }
+.privacy-section h2 { color: var(--white); }
+.privacy-section .section-intro { color: rgba(255,255,255,0.55); }
+.privacy-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px; margin-top: 52px; max-width: 900px;
+}
+.privacy-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px; padding: 28px 26px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.privacy-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.2); }
+.pc-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(245,178,74,0.14); border: 1px solid rgba(245,178,74,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; margin-bottom: 17px;
+}
+.privacy-card h3 {
+  font-family: 'Playfair Display', Georgia, serif; font-weight: 400;
+  font-size: 20px; color: var(--white); margin-bottom: 10px; line-height: 1.25;
+}
+.privacy-card p { font-size: 16px; color: rgba(255,255,255,0.62); line-height: 1.7; }
+.privacy-card p strong { color: rgba(255,255,255,0.92); font-weight: 500; }
+.privacy-bottom {
+  margin-top: 40px; max-width: 900px;
+  padding: 24px 28px; border-radius: 14px;
+  background: rgba(5,28,52,0.5); border: 1px solid rgba(255,255,255,0.1);
+  font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.75;
+}
+.privacy-bottom strong { color: rgba(255,255,255,0.92); font-weight: 500; }
+.privacy-bottom a { color: var(--amber-lt); text-decoration: none; border-bottom: 1px solid rgba(245,178,74,0.35); }
+.privacy-bottom a:hover { border-bottom-color: var(--amber-lt); }
+
 /* ── WHAT ARTHUR IS NOT ── */
 .notarthur-section { background: var(--sky-light); }
 .notarthur-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; margin-top: 52px; }
@@ -563,6 +539,18 @@ footer a:hover { color: rgba(255,255,255,0.9); }
 @media (max-width: 860px) {
   .notarthur-grid { grid-template-columns: 1fr; gap: 32px; }
   .start-steps { grid-template-columns: 1fr; }
+  .privacy-grid { grid-template-columns: 1fr; }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-up { opacity: 1; transform: none; }
 }
 </style>
 </head>
@@ -753,6 +741,38 @@ footer a:hover { color: rgba(255,255,255,0.9); }
   <p class="everyday-payoff fade-up" data-delay="2">Whatever it is, Arthur helps you figure out what's going on and what to do next &mdash; one step at a time, no rushing, no making you feel foolish. <strong>So you handle it yourself, without waiting on anyone.</strong></p>
 </section>
 
+<!-- YOUR WORDS / PRIVACY -->
+<section class="privacy-section" id="privacy">
+  <div class="fade-up"><span class="section-label">Your Words</span></div>
+  <h2 class="fade-up" data-delay="1">You should know what<br>happens to what you say.</h2>
+  <p class="section-intro fade-up" data-delay="2">Anyone who asks you to talk to a computer owes you a straight answer about where your words go. Here's ours, without the fine print.</p>
+  <div class="privacy-grid">
+    <div class="privacy-card fade-up">
+      <div class="pc-icon">🎙️</div>
+      <h3>Yes, Arthur records your calls</h3>
+      <p>We're not going to bury that. <strong>Recording is how Arthur remembers you</strong> &mdash; your name, your family, the thing that was bothering you last week. Your calls are turned into notes so the next one picks up where the last one left off. If Arthur didn't keep them, he'd be a stranger every time you called.</p>
+    </div>
+    <div class="privacy-card fade-up" data-delay="1">
+      <div class="pc-icon">🔒</div>
+      <h3>Nobody is watching you</h3>
+      <p><strong>There's no family dashboard. We haven't built one.</strong> No one gets a feed of your calls, a report card, or an alert about how you're doing. Our small team can review calls to make Arthur better at his job &mdash; that's it. What you tell Arthur isn't a way for anyone to keep tabs on you.</p>
+    </div>
+    <div class="privacy-card fade-up" data-delay="2">
+      <div class="pc-icon">🚫</div>
+      <h3>We don't sell any of it</h3>
+      <p><strong>Not your number, not your conversations, not a thing.</strong> Arthur runs on a handful of outside services to make calls work and to give Arthur his voice. They're only allowed to do that job for us &mdash; not to use anything about you for their own purposes.</p>
+    </div>
+    <div class="privacy-card fade-up" data-delay="3">
+      <div class="pc-icon">🗑️</div>
+      <h3>You can have it all erased</h3>
+      <p><strong>Ask, and it's gone</strong> &mdash; your account, the recordings, the notes, all of it. No forms to chase, no runaround. You can stop the texts by replying STOP, and stop the calls just by saying so.</p>
+    </div>
+  </div>
+  <div class="privacy-bottom fade-up" data-delay="1">
+    <strong>One more honest line:</strong> your information is encrypted on its way to us and only the people who need it can get to it. No system anywhere is perfect, and we're not going to pretend otherwise &mdash; but you're trusting us with real conversations, and we build like we know it. The full details are in our <a href="privacy.html">Privacy Policy</a>, written to be read rather than skimmed.
+  </div>
+</section>
+
 <!-- WHAT ARTHUR IS NOT -->
 <section class="notarthur-section" id="not">
   <div class="fade-up"><span class="section-label">Clear About What This Is</span></div>
@@ -795,7 +815,7 @@ footer a:hover { color: rgba(255,255,255,0.9); }
     <div class="start-step">
       <div class="start-num">2</div>
       <h3>We set Arthur up for you</h3>
-      <p>We add your details by hand &mdash; no app to download, nothing to configure. We'll let you know the moment Arthur's ready for you.</p>
+      <p>We add your details by hand &mdash; no app to download, nothing to configure. We'll let you know the moment Arthur's ready for you, and send you the number to call.</p>
     </div>
     <div class="start-step">
       <div class="start-num">3</div>
@@ -835,7 +855,7 @@ footer a:hover { color: rgba(255,255,255,0.9); }
   <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center;">
     <span>Arthur Studios LLC</span>
     <a href="privacy.html">Privacy</a>
-    <a href="tel:+18774014321">877-401-4321</a>
+    <a href="#privacy">Your Words</a>
   </div>
 </footer>
 
